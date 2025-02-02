@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'teste'"
-    }
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ]
   },
   "scripts": {
     "lint": "eslint src --ext .ts",

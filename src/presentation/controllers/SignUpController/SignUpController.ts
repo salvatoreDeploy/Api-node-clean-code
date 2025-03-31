@@ -1,7 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+import type { HttpRequest, HttpResponse } from '../../protocols/http'
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 export class SignUpController {
-  handle(httpRequest: any): any {
+  handle(httpRequest: HttpRequest): HttpResponse {
     if (!httpRequest.body.name) {
       return {
         statusCode: 400,
@@ -14,6 +17,11 @@ export class SignUpController {
         statusCode: 400,
         body: new Error('Missing param: e-mail'),
       }
+    }
+
+    return {
+      statusCode: 0,
+      body: undefined,
     }
   }
 }

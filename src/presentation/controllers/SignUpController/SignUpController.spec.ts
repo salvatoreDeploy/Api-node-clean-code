@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { InvalidParamError } from '../../errors/invalid-param-error'
-import { MissingParamError } from '../../errors/missing-param-error'
-import { ServerError } from '../../errors/server-error'
+import { InvalidParamError, MissingParamError, ServerError } from '../../errors'
 import type { EmailValdiator } from '../../protocols/EmailValidator'
 import { SignUpController } from './SignUpController'
 
